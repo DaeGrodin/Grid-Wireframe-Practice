@@ -75,3 +75,25 @@ footer {
   padding: 15px;
   text-align: center;
 }
+
+/* layout for desktop */
+@media (min-width: 1024px) {
+  .grid-container {
+    grid-template-areas:
+      "header header header"
+      "aside1 content aside2"
+      "footer footer footer";
+    grid-template-columns: 1fr 2fr 1fr;
+    width: 100%;
+    max-width: 1200px;
+  }
+
+  .article-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .article-wrapper article {
+    flex: 1;
+  }
+}
